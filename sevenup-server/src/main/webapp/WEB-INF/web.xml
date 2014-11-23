@@ -6,7 +6,7 @@
        version="3.0">
 
 	<display-name>SevenUp Restful Web Application</display-name>
-	<description>Developed By org.7up</description>
+	<description>Developed By SevenUp</description>
 
 	<!-- - Location of the XML file that defines the root application context. - Applied by ContextLoaderListener. -->
 	<context-param>

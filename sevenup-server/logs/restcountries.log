@@ -268,3 +268,364 @@
 2014-11-23 18:15:58,112 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
 2014-11-23 18:15:58,123 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
 2014-11-23 18:15:58,168 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1437 ms
+2014-11-23 20:02:08,036 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:02:08,269 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:02:08 CST 2014]; root of context hierarchy
+2014-11-23 20:02:08,308 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:02:08,513 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 20:02:08,694 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:02:08,919 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 20:02:08,955 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:02:09,070 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 986 ms
+2014-11-23 20:02:09,190 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:02:09,195 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:02:09 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:02:09,196 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:02:09,237 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:02:09,746 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:02:10,077 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-11-23 20:02:10,078 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-11-23 20:02:10,079 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.domain.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-11-23 20:02:10,081 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.domain.Account)
+2014-11-23 20:02:10,082 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.domain.Account)
+2014-11-23 20:02:10,085 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login(org.sevenup.rest.domain.Account)
+2014-11-23 20:02:10,085 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login2/{userName}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login2(java.lang.String)
+2014-11-23 20:02:10,086 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/cities],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String[] org.sevenup.rest.controller.LoginController.cities(javax.servlet.http.HttpServletResponse)
+2014-11-23 20:02:10,272 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:02:09 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:02:10,333 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:02:09 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:02:10,445 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 20:02:10,459 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 20:02:10,468 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 20:02:10,476 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 20:02:10,507 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1317 ms
+2014-11-23 20:10:17,630 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:10:17,891 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:10:17 CST 2014]; root of context hierarchy
+2014-11-23 20:10:17,953 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:10:18,254 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 20:10:18,442 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:10:18,635 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 20:10:18,643 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:10:18,820 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 1136 ms
+2014-11-23 20:10:18,932 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:10:18,937 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:10:18 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:10:18,938 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:10:18,978 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:10:19,450 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:10:19,794 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-11-23 20:10:19,795 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-11-23 20:10:19,796 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.domain.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-11-23 20:10:19,801 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.domain.Account)
+2014-11-23 20:10:19,802 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.domain.Account)
+2014-11-23 20:10:19,805 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login(org.sevenup.rest.domain.Account)
+2014-11-23 20:10:19,805 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login2/{userName}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login2(java.lang.String)
+2014-11-23 20:10:19,806 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/cities],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String[] org.sevenup.rest.controller.LoginController.cities(javax.servlet.http.HttpServletResponse)
+2014-11-23 20:10:19,995 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:10:18 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:10:20,082 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:10:18 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:10:20,166 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 20:10:20,168 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 20:10:20,177 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 20:10:20,183 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 20:10:20,222 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1290 ms
+2014-11-23 20:11:50,785 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:10:18 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:11:50,802 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing Root WebApplicationContext: startup date [Sun Nov 23 20:10:17 CST 2014]; root of context hierarchy
+2014-11-23 20:11:51,148 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:11:51,460 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:11:51 CST 2014]; root of context hierarchy
+2014-11-23 20:11:51,502 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:11:51,560 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 20:11:51,734 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:11:51,980 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 20:11:51,986 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:11:52,073 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 923 ms
+2014-11-23 20:11:52,111 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:11:52,117 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:11:52 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:11:52,118 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:11:52,143 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:11:52,508 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:11:52,745 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-11-23 20:11:52,745 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-11-23 20:11:52,746 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.domain.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-11-23 20:11:52,746 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.domain.Account)
+2014-11-23 20:11:52,746 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.domain.Account)
+2014-11-23 20:11:52,747 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login(org.sevenup.rest.domain.Account)
+2014-11-23 20:11:52,748 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login2/{userName}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login2(java.lang.String)
+2014-11-23 20:11:52,748 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/cities],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String[] org.sevenup.rest.controller.LoginController.cities(javax.servlet.http.HttpServletResponse)
+2014-11-23 20:11:52,869 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:11:52 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:11:52,937 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:11:52 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:11:52,991 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 20:11:52,993 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 20:11:53,000 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 20:11:53,004 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 20:11:53,045 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 934 ms
+2014-11-23 20:12:01,936 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:12:02,183 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:12:02 CST 2014]; root of context hierarchy
+2014-11-23 20:12:02,261 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:12:02,475 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 20:12:02,625 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:12:03,152 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 20:12:03,157 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:12:03,312 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 1373 ms
+2014-11-23 20:12:03,426 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:12:03,437 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:12:03 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:12:03,443 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:12:03,486 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:12:04,035 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:12:04,512 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-11-23 20:12:04,512 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-11-23 20:12:04,513 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.domain.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-11-23 20:12:04,515 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.domain.Account)
+2014-11-23 20:12:04,516 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.domain.Account)
+2014-11-23 20:12:04,517 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login(org.sevenup.rest.domain.Account)
+2014-11-23 20:12:04,518 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login2/{userName}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login2(java.lang.String)
+2014-11-23 20:12:04,519 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/cities],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String[] org.sevenup.rest.controller.LoginController.cities(javax.servlet.http.HttpServletResponse)
+2014-11-23 20:12:04,732 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:12:03 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:12:04,819 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:12:03 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:12:04,890 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 20:12:04,904 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 20:12:04,915 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 20:12:04,923 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 20:12:04,965 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1539 ms
+2014-11-23 20:14:25,537 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:12:03 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:14:25,550 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing Root WebApplicationContext: startup date [Sun Nov 23 20:12:02 CST 2014]; root of context hierarchy
+2014-11-23 20:14:25,979 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:14:26,168 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:14:26 CST 2014]; root of context hierarchy
+2014-11-23 20:14:26,258 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:14:26,292 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 20:14:26,454 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:14:26,628 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 20:14:26,638 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:14:26,743 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 761 ms
+2014-11-23 20:14:26,776 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:14:26,780 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:14:26 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:14:26,781 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:14:26,828 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:16:32,622 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:16:32,903 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:16:32 CST 2014]; root of context hierarchy
+2014-11-23 20:16:33,021 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:16:33,235 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 20:16:33,536 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:16:33,724 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 20:16:33,729 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:16:33,882 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 1254 ms
+2014-11-23 20:16:34,028 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:16:34,037 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:16:34 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:16:34,038 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:16:34,073 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:16:34,543 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:16:34,888 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-11-23 20:16:34,888 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-11-23 20:16:34,898 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.domain.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-11-23 20:16:34,906 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.domain.Account)
+2014-11-23 20:16:34,910 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.domain.Account)
+2014-11-23 20:16:34,913 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login(org.sevenup.rest.domain.Account)
+2014-11-23 20:16:34,913 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login2/{userName}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login2(java.lang.String)
+2014-11-23 20:16:34,914 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/cities],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String[] org.sevenup.rest.controller.LoginController.cities(javax.servlet.http.HttpServletResponse)
+2014-11-23 20:16:35,115 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:16:34 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:16:35,263 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:16:34 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:16:35,376 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 20:16:35,381 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 20:16:35,399 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 20:16:35,408 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 20:16:35,446 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1418 ms
+2014-11-23 20:42:34,726 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:42:34,951 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:42:34 CST 2014]; root of context hierarchy
+2014-11-23 20:42:35,104 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:42:35,496 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:42:35,792 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 1062 ms
+2014-11-23 20:42:35,865 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 20:42:35,876 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:42:35 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:42:35,877 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 20:42:35,946 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 20:42:36,447 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 20:42:36,786 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-11-23 20:42:36,787 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-11-23 20:42:36,788 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.domain.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-11-23 20:42:36,788 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.domain.Account)
+2014-11-23 20:42:36,789 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.domain.Account)
+2014-11-23 20:42:36,790 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login(org.sevenup.rest.domain.Account)
+2014-11-23 20:42:36,792 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/login2/{userName}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.domain.Account> org.sevenup.rest.controller.LoginController.Login2(java.lang.String)
+2014-11-23 20:42:36,792 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/cities],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String[] org.sevenup.rest.controller.LoginController.cities(javax.servlet.http.HttpServletResponse)
+2014-11-23 20:42:36,960 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:42:35 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:42:37,045 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:42:35 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:42:37,148 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 20:42:37,150 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 20:42:37,159 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 20:42:37,165 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 20:42:37,188 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1322 ms
+2014-11-23 20:47:17,752 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 20:42:35 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 20:47:17,758 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing Root WebApplicationContext: startup date [Sun Nov 23 20:42:34 CST 2014]; root of context hierarchy
+2014-11-23 20:47:18,058 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:47:18,328 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:47:18 CST 2014]; root of context hierarchy
+2014-11-23 20:47:18,427 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 20:47:18,518 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 20:47:18,520 ERROR [org.springframework.web.context.ContextLoader:331] Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/tools-config.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/tools-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.restartWebApp(AbstractJettyRunMojo.java:458)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:419)
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:486)
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:352)
+	at org.mortbay.util.Scanner.scan(Scanner.java:280)
+	at org.mortbay.util.Scanner$1.run(Scanner.java:232)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Caused by: java.io.FileNotFoundException: class path resource [spring/tools-config.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 27 more
+2014-11-23 20:48:41,940 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:48:42,178 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:48:42 CST 2014]; root of context hierarchy
+2014-11-23 20:48:42,271 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2014-11-23 20:48:42,273 ERROR [org.springframework.web.context.ContextLoader:331] Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/applicationContext.xml]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/applicationContext.xml]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:141)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 53 more
+2014-11-23 20:51:03,121 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing Root WebApplicationContext: startup date [Sun Nov 23 20:48:42 CST 2014]; root of context hierarchy
+2014-11-23 20:51:03,125 WARN  [org.springframework.web.context.support.XmlWebApplicationContext:872] Exception thrown from ApplicationListener handling ContextClosedEvent
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: Root WebApplicationContext: startup date [Sun Nov 23 20:48:42 CST 2014]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:344)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:331)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:836)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:579)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:115)
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:599)
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:505)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:123)
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:76)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.restartWebApp(AbstractJettyRunMojo.java:436)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:419)
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:486)
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:352)
+	at org.mortbay.util.Scanner.scan(Scanner.java:280)
+	at org.mortbay.util.Scanner$1.run(Scanner.java:232)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+2014-11-23 20:51:03,126 WARN  [org.springframework.web.context.support.XmlWebApplicationContext:880] Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Sun Nov 23 20:48:42 CST 2014]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:357)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:836)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:579)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:115)
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:599)
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:505)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:123)
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:76)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.restartWebApp(AbstractJettyRunMojo.java:436)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:419)
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:486)
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:352)
+	at org.mortbay.util.Scanner.scan(Scanner.java:280)
+	at org.mortbay.util.Scanner$1.run(Scanner.java:232)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+2014-11-23 20:51:13,532 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 20:51:13,691 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 20:51:13 CST 2014]; root of context hierarchy
+2014-11-23 20:51:13,749 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2014-11-23 20:51:13,751 ERROR [org.springframework.web.context.ContextLoader:331] Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/applicationContext.xml]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.restartWebApp(AbstractJettyRunMojo.java:458)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:419)
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:486)
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:352)
+	at org.mortbay.util.Scanner.scan(Scanner.java:280)
+	at org.mortbay.util.Scanner$1.run(Scanner.java:232)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/applicationContext.xml]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:141)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 27 more
