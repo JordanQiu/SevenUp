@@ -17,9 +17,10 @@
 
 	<properties>
 		<!-- Spring -->
-		<spring-framework.version>4.0.6.RELEASE</spring-framework.version>
-
-		<mongo-java-driver.version>2.12.3</mongo-java-driver.version>
+		<spring-framework.version>4.1.2.RELEASE</spring-framework.version>
+        <spring-hateoas.version>0.16.0.RELEASE</spring-hateoas.version>
+        <spring-security.version>3.2.5.RELEASE</spring-security.version>
+		<mongo-java-driver.version>2.13.0-rc0</mongo-java-driver.version>
 		<spring-data-mongodb.version>1.5.2.RELEASE</spring-data-mongodb.version>
 
 		<jaxb-impl.version>2.2.6</jaxb-impl.version>
@@ -29,8 +30,9 @@
 		<slf4j.version>1.7.7</slf4j.version>
 		<!-- RSS -->
 		<rome.version>1.0</rome.version>
+		<codehaus.jackson.version>1.9.13</codehaus.jackson.version>
 		<!-- Test -->
-		<junit.version>4.11</junit.version>
+		<junit.version>4.12-beta-3</junit.version>
 	</properties>
 
 
@@ -68,7 +70,7 @@
 		<dependency>
 			<groupId>org.springframework.hateoas</groupId>
 			<artifactId>spring-hateoas</artifactId>
-			<version>0.16.0.RELEASE</version>
+			<version>${spring-hateoas.version}</version>
 		</dependency>
 
 		<!-- used for EhCacheCacheManager -->
@@ -103,12 +105,12 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>${spring-security.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>3.2.4.RELEASE</version>
+			<version>${spring-security.version}</version>
 		</dependency>
 
 		<!-- Mongodb Java Driver -->
@@ -128,12 +130,12 @@
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.13</version>
+			<version>${codehaus.jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
-			<version>1.9.13</version>
+			<version>${codehaus.jackson.version}</version>
 		</dependency>
 
 		<dependency>

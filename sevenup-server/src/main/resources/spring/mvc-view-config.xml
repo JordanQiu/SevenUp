@@ -18,8 +18,8 @@
 			<list>
 				<!-- Default viewClass: JSTL view (html output) -->
 				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-					<!-- Example: a logical view name of 'sevenup' is mapped to '/WEB-INF/pages/sevenup.html' -->
-					<property name="prefix" value="/WEB-INF/pages/" />
+					<!-- Example: a logical view name of 'sevenup' is mapped to '/sevenup.html' -->
+					<property name="prefix" value="/" />
 					<property name="suffix" value=".html" />
 				</bean>
 				<!-- JSON 

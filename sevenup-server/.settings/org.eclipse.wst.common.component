@@ -7,6 +7,15 @@
         <dependent-module archiveName="sevenup-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sevenup-common/sevenup-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="sevenup-rest-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sevenup-rest/sevenup-rest">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sevenup-service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sevenup-service/sevenup-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sevenup-repository-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sevenup-repository/sevenup-repository">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/sevenup-server/target/classes"/>
         <property name="context-root" value="SevenUp"/>
     </wb-module>

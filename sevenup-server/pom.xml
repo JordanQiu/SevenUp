@@ -1,27 +1,43 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.sevenup</groupId>
-    <artifactId>SevenUp</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>org.sevenup</groupId>
-  <artifactId>sevenup-server</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>sevenup-server Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-  <dependency>
-    <groupId>org.sevenup</groupId>
-  <artifactId>sevenup-common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  </dependency>
-  </dependencies>
-  <build>
-  <plugins>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.sevenup</groupId>
+		<artifactId>SevenUp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>org.sevenup</groupId>
+	<artifactId>sevenup-server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>sevenup-server Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>org.sevenup</groupId>
+			<artifactId>sevenup-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+				<dependency>
+			<groupId>org.sevenup</groupId>
+			<artifactId>sevenup-rest</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+				<dependency>
+			<groupId>org.sevenup</groupId>
+			<artifactId>sevenup-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+				<dependency>
+			<groupId>org.sevenup</groupId>
+			<artifactId>sevenup-repository</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>maven-jetty-plugin</artifactId>
@@ -52,6 +68,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			</plugins>
-  </build>
+		</plugins>
+	</build>
 </project>
