@@ -1,0 +1,18 @@
+2014-11-23 16:55:16,914 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-11-23 16:55:17,100 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:513] Refreshing Root WebApplicationContext: startup date [Sun Nov 23 16:55:17 CST 2014]; root of context hierarchy
+2014-11-23 16:55:17,200 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-11-23 16:55:17,445 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-11-23 16:55:17,563 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-11-23 16:55:17,784 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-11-23 16:55:17,792 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:141] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 16:55:17,894 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 976 ms
+2014-11-23 16:55:17,990 INFO  [org.springframework.web.servlet.DispatcherServlet:479] FrameworkServlet 'SevenUp': initialization started
+2014-11-23 16:55:17,997 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:513] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Sun Nov 23 16:55:17 CST 2014]; parent: Root WebApplicationContext
+2014-11-23 16:55:17,998 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-11-23 16:55:18,029 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:316] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-11-23 16:55:18,261 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:141] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-11-23 16:55:19,234 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-11-23 16:55:19,236 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-11-23 16:55:19,246 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:302] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-11-23 16:55:19,252 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-11-23 16:55:19,271 INFO  [org.springframework.web.servlet.DispatcherServlet:498] FrameworkServlet 'SevenUp': initialization completed in 1280 ms
