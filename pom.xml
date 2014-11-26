@@ -21,7 +21,7 @@
         <spring-hateoas.version>0.16.0.RELEASE</spring-hateoas.version>
         <spring-security.version>3.2.5.RELEASE</spring-security.version>
 		<mongo-java-driver.version>2.13.0-rc0</mongo-java-driver.version>
-		<spring-data-mongodb.version>1.5.2.RELEASE</spring-data-mongodb.version>
+		<spring-data-mongodb.version>1.6.1.RELEASE</spring-data-mongodb.version>
 		<!-- Database access -->
 		<ehcache.version>2.6.6</ehcache.version>
 		<!-- Logging -->
@@ -32,6 +32,8 @@
 		<javax.ws.rs.version>1.1.1</javax.ws.rs.version>
 		<!-- Test -->
 		<junit.version>4.12-beta-3</junit.version>
+		
+		<jetty.javax.servlet.version>5.1.12</jetty.javax.servlet.version>
 	</properties>
 
 
@@ -170,7 +172,7 @@
 		<dependency>
 			<groupId>jetty</groupId>
 			<artifactId>javax.servlet</artifactId>
-			<version>5.1.12</version>
+			<version>${jetty.javax.servlet.version}</version>
 		</dependency>
 	</dependencies>
 
