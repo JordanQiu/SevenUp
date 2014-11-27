@@ -122,7 +122,7 @@
 			<version>${spring-data-mongodb.version}</version>
 		</dependency>
 
-		<!-- jackson for JSON -->
+		<!-- jackson for JSON 
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
@@ -133,7 +133,12 @@
 			<artifactId>jackson-core-asl</artifactId>
 			<version>${codehaus.jackson.version}</version>
 		</dependency>
-
+-->
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId>
+  <artifactId>jackson-databind</artifactId>
+  <version>2.4.3</version>
+</dependency>
 
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
