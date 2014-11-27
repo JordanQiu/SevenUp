@@ -1,6 +1,5 @@
 package org.sevenup.rest.controller.user;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -8,6 +7,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.sevenup.rest.domain.user.User;
+import org.sevenup.service.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,18 +24,17 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RestController
 @Produces(MediaType.APPLICATION_JSON)
 public class UserController {
-	
+    private final UserService userService;
+    
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 	@RequestMapping(value ="/users",method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
-	public List<User> getUsers() {
-		List<User> userList = new ArrayList<User>();
-		for (int i = 0; i < 10; i++) {
-			User tempUser = new User();
-			tempUser.setUid("hhhh"+i);
-			userList.add(tempUser);
-		}
-		return userList;
+	public List<org.sevenup.repository.user.User> getUsers() {
+		return userService.findUsers();
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "user/{id}")

@@ -20,21 +20,12 @@
 			<artifactId>sevenup-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>org.sevenup</groupId>
 			<artifactId>sevenup-rest</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-				<dependency>
-			<groupId>org.sevenup</groupId>
-			<artifactId>sevenup-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-				<dependency>
-			<groupId>org.sevenup</groupId>
-			<artifactId>sevenup-repository</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
