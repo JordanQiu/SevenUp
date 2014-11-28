@@ -1,5 +1,6 @@
 package org.sevenup.rest.controller.user;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -33,8 +34,14 @@ public class UserController {
 	@RequestMapping(value ="/users",method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
-	public List<org.sevenup.repository.user.User> getUsers() {
-		return userService.findUsers();
+	public List<User> getUsers() {
+//		return userService.findUsers();
+		List<User> userList = new ArrayList<User>();
+		for(int i=0;i<10;i++){
+			User temp = new User();
+			userList.add(temp);
+		}
+		return userList;
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "user/{id}")

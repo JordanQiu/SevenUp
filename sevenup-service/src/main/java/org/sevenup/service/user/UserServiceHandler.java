@@ -7,7 +7,7 @@ import org.sevenup.repository.user.User;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceHandler implements UserService{
 
 	@Override
 	public List<User> findUsers() throws DataAccessException {
