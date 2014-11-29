@@ -2,7 +2,6 @@ package org.sevenup.rest.domain.memo;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -12,14 +11,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.hateoas.ResourceSupport;
 
-@XmlRootElement(name="memoList")
+@XmlRootElement(name="memoItem")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Memo extends ResourceSupport implements Serializable {
+public class MemoItem extends ResourceSupport implements Serializable {
 	private Date dateTimeOfSubmission;
 	private UUID key;
-	@XmlElement(name="memoItem")
-	private List<MemoItem> items;
-	
+	private String title;
+	private String description;
+
 	public Date getDateTimeOfSubmission() {
 		return dateTimeOfSubmission;
 	}
@@ -36,13 +35,20 @@ public class Memo extends ResourceSupport implements Serializable {
 		this.key = key;
 	}
 
-	public List<MemoItem> getItems() {
-		return items;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setItems(List<MemoItem> items) {
-		this.items = items;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	
-	
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 }
