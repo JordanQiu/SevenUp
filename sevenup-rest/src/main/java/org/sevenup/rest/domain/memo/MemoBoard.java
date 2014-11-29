@@ -11,38 +11,29 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.hateoas.ResourceSupport;
-
-@XmlRootElement(name="memo")
+@XmlRootElement(name="memoBoard")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Memo extends ResourceSupport implements Serializable {
+public class MemoBoard extends ResourceSupport implements Serializable{
 	private Date dateTimeOfSubmission;
 	private UUID key;
-	@XmlElement(name="memoItem")
-	private List<MemoItem> items;
-	
+	@XmlElement(name="memo")
+	private List<Memo> items;
 	public Date getDateTimeOfSubmission() {
 		return dateTimeOfSubmission;
 	}
-
 	public void setDateTimeOfSubmission(Date dateTimeOfSubmission) {
 		this.dateTimeOfSubmission = dateTimeOfSubmission;
 	}
-
 	public UUID getKey() {
 		return key;
 	}
-
 	public void setKey(UUID key) {
 		this.key = key;
 	}
-
-	public List<MemoItem> getItems() {
+	public List<Memo> getItems() {
 		return items;
 	}
-
-	public void setItems(List<MemoItem> items) {
+	public void setItems(List<Memo> items) {
 		this.items = items;
 	}
-	
-	
 }
