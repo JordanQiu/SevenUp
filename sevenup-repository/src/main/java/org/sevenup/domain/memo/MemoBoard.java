@@ -1,4 +1,4 @@
-package org.sevenup.rest.domain.memo;
+package org.sevenup.domain.memo;
 
 import java.io.Serializable;
 import java.util.Date;

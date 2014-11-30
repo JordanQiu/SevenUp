@@ -2,6 +2,11 @@ package org.sevenup.domain.memo;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement(name="memoItem")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MemoItem {
 	private String title;
 	private String content;
