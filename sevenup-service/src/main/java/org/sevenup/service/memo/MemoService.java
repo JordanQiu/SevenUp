@@ -2,9 +2,11 @@ package org.sevenup.service.memo;
 
 import java.util.List;
 
-import org.sevenup.repository.memo.Memo;
+import org.sevenup.domain.memo.Memo;
+import org.sevenup.domain.memo.MemoItem;
 import org.springframework.dao.DataAccessException;
 
 public interface MemoService {
-    List<Memo> findMemos() throws DataAccessException;
+	public Memo findMemo();
+	public MemoItem findMemoItem();
 }

@@ -17,7 +17,9 @@ public class MemoItem extends ResourceSupport implements Serializable {
 	private Date dateTimeOfSubmission;
 	private UUID key;
 	private String title;
-	private String description;
+	private String content;
+	private Date createdTime;
+	private Date deadlineTime;
 
 	public Date getDateTimeOfSubmission() {
 		return dateTimeOfSubmission;
@@ -43,12 +45,27 @@ public class MemoItem extends ResourceSupport implements Serializable {
 		this.title = title;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getContent() {
+		return content;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
+
+	public Date getDeadlineTime() {
+		return deadlineTime;
+	}
+
+	public void setDeadlineTime(Date deadlineTime) {
+		this.deadlineTime = deadlineTime;
+	}
 }

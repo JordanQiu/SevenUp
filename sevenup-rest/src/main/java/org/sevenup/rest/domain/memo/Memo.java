@@ -17,6 +17,8 @@ import org.springframework.hateoas.ResourceSupport;
 public class Memo extends ResourceSupport implements Serializable {
 	private Date dateTimeOfSubmission;
 	private UUID key;
+	private String title;
+	private Date createdTime;
 	@XmlElement(name="memoItem")
 	private List<MemoItem> items;
 	
@@ -42,6 +44,22 @@ public class Memo extends ResourceSupport implements Serializable {
 
 	public void setItems(List<MemoItem> items) {
 		this.items = items;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
 	}
 	
 	

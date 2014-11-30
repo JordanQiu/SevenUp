@@ -1,8 +1,12 @@
-package org.sevenup.repository.user;
+package org.sevenup.domain.user;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="users")
 public class User{
-
-	private Long id;
+	@Id
+	private String id;
 	private String uid;
 	private String name;
 	private String avatar;
@@ -13,10 +17,10 @@ public class User{
 	private String locactionName;
 	private String description;
 	
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getUid() {
