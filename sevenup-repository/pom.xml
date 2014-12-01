@@ -14,8 +14,21 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <mongo-java-driver.version>2.13.0-rc0</mongo-java-driver.version>
+	<spring-data-mongodb.version>1.6.1.RELEASE</spring-data-mongodb.version>
   </properties>
   <dependencies>
+		<!-- Mongodb Java Driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>${mongo-java-driver.version}</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>${spring-data-mongodb.version}</version>
+		</dependency>
   </dependencies>
 </project>

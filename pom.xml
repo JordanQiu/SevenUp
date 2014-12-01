@@ -20,8 +20,6 @@
 		<spring-framework.version>4.1.2.RELEASE</spring-framework.version>
         <spring-hateoas.version>0.16.0.RELEASE</spring-hateoas.version>
         <spring-security.version>3.2.5.RELEASE</spring-security.version>
-		<mongo-java-driver.version>2.13.0-rc0</mongo-java-driver.version>
-		<spring-data-mongodb.version>1.6.1.RELEASE</spring-data-mongodb.version>
 		<!-- Database access -->
 		<ehcache.version>2.6.6</ehcache.version>
 		<!-- Logging -->
@@ -107,19 +105,6 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring-security.version}</version>
-		</dependency>
-
-		<!-- Mongodb Java Driver -->
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>${mongo-java-driver.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-mongodb</artifactId>
-			<version>${spring-data-mongodb.version}</version>
 		</dependency>
 
 		<!-- jackson for JSON -->

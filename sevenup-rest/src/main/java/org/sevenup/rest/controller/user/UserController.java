@@ -7,7 +7,7 @@ import java.util.UUID;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.sevenup.rest.domain.user.User;
+import org.sevenup.domain.user.User;
 import org.sevenup.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
+@RequestMapping("/users")
 @Produces(MediaType.APPLICATION_JSON)
 public class UserController {
     private final UserService userService;
@@ -31,20 +32,20 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
-	@RequestMapping(value ="/users",method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
-	public List<User> getUsers() {
+	public ResponseEntity<List<User>> getUsers() {
 //		return userService.findUsers();
 		List<User> userList = new ArrayList<User>();
 		for(int i=0;i<10;i++){
 			User temp = new User();
 			userList.add(temp);
 		}
-		return userList;
+		return new ResponseEntity<List<User>>(userList, HttpStatus.OK);
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = "user/{id}")
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
 	public ResponseEntity<User> viewUser(@PathVariable String id) {
 		
 		User user = new User();

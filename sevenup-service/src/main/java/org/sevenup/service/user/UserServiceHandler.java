@@ -3,7 +3,7 @@ package org.sevenup.service.user;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.sevenup.repository.user.User;
+import org.sevenup.domain.user.User;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 @Service
