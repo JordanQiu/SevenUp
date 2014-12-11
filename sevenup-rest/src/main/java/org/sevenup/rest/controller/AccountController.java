@@ -1,5 +1,6 @@
 package org.sevenup.rest.controller;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -7,7 +8,6 @@ import java.util.UUID;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.sevenup.rest.domain.Account;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +40,21 @@ public class AccountController {
 		return accounts;
 	}
 
+	@RequestMapping(method = RequestMethod.GET, value = "/xxx")
+	@Produces(MediaType.APPLICATION_XML)
+	public ResponseEntity<List<Account>> viewAccounts() {
+		List<Account> accounts = new ArrayList<Account>();
+		for (int i = 0; i < 10; i++) {
+			Account tempAccount = new Account();
+			tempAccount.setAccountName("Nonumber00" + i);
+			tempAccount.setEmail("nonumber" + i + "@gmail.com");
+			tempAccount.setPassword("nonumber1989");
+			accounts.add(tempAccount);
+		}
+		return new ResponseEntity<List<Account>>(accounts, HttpStatus.OK);
+	}
+
+	
 	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
 	public ResponseEntity<Account> viewAccount(@PathVariable String id) {
 		// return new ResponseEntity<Account>(HttpStatus.NOT_FOUND);

@@ -1,12 +1,21 @@
 package org.sevenup.domain.user;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="users")
-public class User{
-	@Id
-	private String id;
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.ResourceSupport;
+@XmlRootElement(name = "user")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class User extends ResourceSupport implements Serializable{
+
+//	private Long id;
 	private String uid;
 	private String name;
 	private String avatar;
@@ -16,13 +25,7 @@ public class User{
 	private String locactionId;
 	private String locactionName;
 	private String description;
-	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+
 	public String getUid() {
 		return uid;
 	}
@@ -77,4 +80,5 @@ public class User{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 }
