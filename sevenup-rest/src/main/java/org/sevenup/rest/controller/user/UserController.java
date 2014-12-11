@@ -37,13 +37,7 @@ public class UserController {
 	@ResponseBody
 	public ResponseEntity<List<User>> getUsers() {
 //		return userService.findUsers();
-		List<User> userList = new ArrayList<User>();
-		List<org.sevenup.domain.user.User> theUsers = userService.findUsers();
-		System.out.print("nonunuddddddddddddddddd--------"+theUsers.size());
-		for(int i=0;i<10;i++){
-			User temp = new User();
-			userList.add(temp);
-		}
+		List<User> userList =  userService.findUsers();
 		return new ResponseEntity<List<User>>(userList, HttpStatus.OK);
 	}
 
