@@ -4,21 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sevenup.domain.user.User;
+import org.sevenup.repository.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
+
 @Service
 public class UserServiceHandler implements UserService{
 
+	private Repository userRepository;
+	@Autowired
+	public UserServiceHandler(Repository userRepository) {
+		this.userRepository = userRepository;
+	}
+
 	@Override
 	public List<User> findUsers() throws DataAccessException {
-		List<User> userList = new ArrayList<User>();
-		for (int i = 0; i < 10; i++) {
-			User tempUser = new User();
-			tempUser.setUid("nonumber-"+i);
-			tempUser.setLocactionId("city-"+i);
-			tempUser.setName("sevenup-"+i);
-			userList.add(tempUser);
-		}
+		userRepository.dropCollection();
+        
+		userRepository.createCollection();
+        for(int i =0;i<15;i++){
+        	User user= new User();
+        	user.setName("number"+i);
+        	user.setCreatedTime("2014-12-23");
+        	user.setLocactionId("test");
+        	userRepository.saveObject(user);
+        }
+		List<User> userList = userRepository.getAllObjects();
 		return userList;
 	}
 

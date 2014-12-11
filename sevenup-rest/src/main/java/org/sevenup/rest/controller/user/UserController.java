@@ -37,10 +37,8 @@ public class UserController {
 	public List<User> getUsers() {
 //		return userService.findUsers();
 		List<User> userList = new ArrayList<User>();
-		for(int i=0;i<10;i++){
-			User temp = new User();
-			userList.add(temp);
-		}
+		List<org.sevenup.domain.user.User> theUsers = userService.findUsers();
+		System.out.println(theUsers.size()+"---nonumber1989---");
 		return userList;
 	}
 
