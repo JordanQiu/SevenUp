@@ -487,3 +487,203 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2014-12-11 22:33:45,865 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
 2014-12-11 22:33:45,881 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
 2014-12-11 22:33:45,926 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1643 ms
+2014-12-12 09:41:45,989 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-12 09:41:46,036 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Fri Dec 12 09:41:46 CST 2014]; root of context hierarchy
+2014-12-12 09:41:46,067 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-12 09:41:46,129 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-12 09:41:46,254 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-12 09:41:46,410 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-12 09:41:46,426 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-12 09:41:46,753 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 764 ms
+2014-12-12 09:41:46,785 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-12-12 09:41:46,800 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Fri Dec 12 09:41:46 CST 2014]; parent: Root WebApplicationContext
+2014-12-12 09:41:46,800 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-12-12 09:41:46,816 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-12-12 09:41:46,926 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/xxx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.rest.controller.Account>> org.sevenup.rest.controller.AccountController.viewAccounts()
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.controller.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.controller.Account)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.controller.Account)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.memo.Memo> org.sevenup.rest.controller.memo.MemoController.createMemo(org.sevenup.domain.memo.Memo,org.springframework.web.util.UriComponentsBuilder)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.sevenup.domain.memo.Memo org.sevenup.rest.controller.memo.MemoController.getMemo()
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.user.UserController.signIn(org.sevenup.domain.user.User)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.signUp(org.sevenup.domain.user.User)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.domain.user.User>> org.sevenup.rest.controller.user.UserController.getUsers()
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.viewUser(java.lang.String)
+2014-12-12 09:41:47,051 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.createUser(org.sevenup.domain.user.User,org.springframework.web.util.UriComponentsBuilder)
+2014-12-12 09:41:47,238 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Fri Dec 12 09:41:46 CST 2014]; parent: Root WebApplicationContext
+2014-12-12 09:41:47,269 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Fri Dec 12 09:41:46 CST 2014]; parent: Root WebApplicationContext
+2014-12-12 09:41:47,316 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-12-12 09:41:47,316 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-12-12 09:41:47,332 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-12-12 09:41:47,332 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-12-12 09:41:47,347 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 562 ms
+2014-12-12 09:42:21,166 WARN  [warn:187] Handler execution resulted in exception
+org.springframework.dao.DataAccessResourceFailureException: Timed out after 10000 ms while waiting for a server that matches AnyServerSelector{}. Client view of cluster state is {type=Unknown, servers=[{address=127.0.0.1:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 10000 ms while waiting for a server that matches AnyServerSelector{}. Client view of cluster state is {type=Unknown, servers=[{address=127.0.0.1:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:71)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:1934)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:396)
+	at org.springframework.data.mongodb.core.MongoTemplate.collectionExists(MongoTemplate.java:458)
+	at org.springframework.data.mongodb.core.MongoTemplate.collectionExists(MongoTemplate.java:454)
+	at org.sevenup.repository.user.RepositoryHandler.dropCollection(RepositoryHandler.java:64)
+	at org.sevenup.service.user.UserServiceHandler.findUsers(UserServiceHandler.java:23)
+	at org.sevenup.rest.controller.user.UserController.getUsers(UserController.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:857)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.sevenup.common.filter.CORSFilter.doFilter(CORSFilter.java:32)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:926)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 10000 ms while waiting for a server that matches AnyServerSelector{}. Client view of cluster state is {type=Unknown, servers=[{address=127.0.0.1:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.BaseCluster.getServer(BaseCluster.java:82)
+	at com.mongodb.DBTCPConnector.getServer(DBTCPConnector.java:654)
+	at com.mongodb.DBTCPConnector.access$300(DBTCPConnector.java:39)
+	at com.mongodb.DBTCPConnector$MyPort.getConnection(DBTCPConnector.java:503)
+	at com.mongodb.DBTCPConnector$MyPort.get(DBTCPConnector.java:451)
+	at com.mongodb.DBTCPConnector.getPrimaryPort(DBTCPConnector.java:409)
+	at com.mongodb.DBApiLayer.isServerVersionAtLeast(DBApiLayer.java:245)
+	at com.mongodb.DBApiLayer.getCollectionNames(DBApiLayer.java:151)
+	at com.mongodb.DB.collectionExists(DB.java:524)
+	at org.springframework.data.mongodb.core.MongoTemplate$5.doInDB(MongoTemplate.java:460)
+	at org.springframework.data.mongodb.core.MongoTemplate$5.doInDB(MongoTemplate.java:458)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:394)
+	... 48 more
+2014-12-12 09:42:45,528 WARN  [warn:187] Handler execution resulted in exception
+org.springframework.dao.DataAccessResourceFailureException: Timed out after 10000 ms while waiting for a server that matches AnyServerSelector{}. Client view of cluster state is {type=Unknown, servers=[{address=127.0.0.1:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 10000 ms while waiting for a server that matches AnyServerSelector{}. Client view of cluster state is {type=Unknown, servers=[{address=127.0.0.1:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:71)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:1934)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:396)
+	at org.springframework.data.mongodb.core.MongoTemplate.collectionExists(MongoTemplate.java:458)
+	at org.springframework.data.mongodb.core.MongoTemplate.collectionExists(MongoTemplate.java:454)
+	at org.sevenup.repository.user.RepositoryHandler.dropCollection(RepositoryHandler.java:64)
+	at org.sevenup.service.user.UserServiceHandler.findUsers(UserServiceHandler.java:23)
+	at org.sevenup.rest.controller.user.UserController.getUsers(UserController.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:857)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.sevenup.common.filter.CORSFilter.doFilter(CORSFilter.java:32)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:926)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 10000 ms while waiting for a server that matches AnyServerSelector{}. Client view of cluster state is {type=Unknown, servers=[{address=127.0.0.1:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.BaseCluster.getServer(BaseCluster.java:82)
+	at com.mongodb.DBTCPConnector.getServer(DBTCPConnector.java:654)
+	at com.mongodb.DBTCPConnector.access$300(DBTCPConnector.java:39)
+	at com.mongodb.DBTCPConnector$MyPort.getConnection(DBTCPConnector.java:503)
+	at com.mongodb.DBTCPConnector$MyPort.get(DBTCPConnector.java:451)
+	at com.mongodb.DBTCPConnector.getPrimaryPort(DBTCPConnector.java:409)
+	at com.mongodb.DBApiLayer.isServerVersionAtLeast(DBApiLayer.java:245)
+	at com.mongodb.DBApiLayer.getCollectionNames(DBApiLayer.java:151)
+	at com.mongodb.DB.collectionExists(DB.java:524)
+	at org.springframework.data.mongodb.core.MongoTemplate$5.doInDB(MongoTemplate.java:460)
+	at org.springframework.data.mongodb.core.MongoTemplate$5.doInDB(MongoTemplate.java:458)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:394)
+	... 48 more
+2014-12-12 17:04:46,797 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-12 17:04:46,901 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Fri Dec 12 17:04:46 CST 2014]; root of context hierarchy
+2014-12-12 17:04:46,946 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-12 17:04:47,339 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-12 17:04:47,652 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-12 17:04:47,829 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-12 17:04:47,838 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-12 17:04:48,664 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 1865 ms
+2014-12-12 17:04:48,739 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-12-12 17:04:48,741 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Fri Dec 12 17:04:48 CST 2014]; parent: Root WebApplicationContext
+2014-12-12 17:04:48,741 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-12-12 17:04:48,769 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-12-12 17:04:48,891 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-12 17:04:49,064 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-12-12 17:04:49,065 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-12-12 17:04:49,065 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/xxx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.rest.controller.Account>> org.sevenup.rest.controller.AccountController.viewAccounts()
+2014-12-12 17:04:49,066 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.controller.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-12-12 17:04:49,066 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.controller.Account)
+2014-12-12 17:04:49,067 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.controller.Account)
+2014-12-12 17:04:49,067 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.memo.Memo> org.sevenup.rest.controller.memo.MemoController.createMemo(org.sevenup.domain.memo.Memo,org.springframework.web.util.UriComponentsBuilder)
+2014-12-12 17:04:49,067 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.sevenup.domain.memo.Memo org.sevenup.rest.controller.memo.MemoController.getMemo()
+2014-12-12 17:04:49,068 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.user.UserController.signIn(org.sevenup.domain.user.User)
+2014-12-12 17:04:49,069 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.signUp(org.sevenup.domain.user.User)
+2014-12-12 17:04:49,069 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.domain.user.User>> org.sevenup.rest.controller.user.UserController.getUsers()
+2014-12-12 17:04:49,069 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.viewUser(java.lang.String)
+2014-12-12 17:04:49,069 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.createUser(org.sevenup.domain.user.User,org.springframework.web.util.UriComponentsBuilder)
+2014-12-12 17:04:49,603 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Fri Dec 12 17:04:48 CST 2014]; parent: Root WebApplicationContext
+2014-12-12 17:04:49,721 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Fri Dec 12 17:04:48 CST 2014]; parent: Root WebApplicationContext
+2014-12-12 17:04:49,774 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-12-12 17:04:49,776 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-12-12 17:04:49,781 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-12-12 17:04:49,797 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-12-12 17:04:49,812 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 1073 ms

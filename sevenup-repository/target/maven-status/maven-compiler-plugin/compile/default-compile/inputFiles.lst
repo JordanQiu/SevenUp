@@ -1,5 +1,9 @@
-F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\user\User.java
-F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\MemoItem.java
-F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\Memo.java
-F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\user\RepositoryHandler.java
-F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\Repository.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\Memo.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\MemoBoard.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\user\UserRepository.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\memo\MemoItemRepository.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\Repository.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\MemoItem.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\memo\MemoRepository.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\user\User.java
+C:\Users\steven.xu\Warship\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\user\RepositoryHandler.java
