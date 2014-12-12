@@ -21,6 +21,8 @@
          http://www.springframework.org/schema/jee/spring-jee.xsd">
 
     <!-- ========================= DATASOURCE DEFINITION ========================= -->
+         <context:annotation-config />
+         <context:component-scan base-package="org.sevenup.repository" />
           <mongo:mongo host="127.0.0.1" port="27017"></mongo:mongo>
           <mongo:db-factory dbname="test" />
           
