@@ -1,0 +1,519 @@
+2014-12-11 22:45:32,499 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-11 22:45:32,573 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Thu Dec 11 22:45:32 CST 2014]; root of context hierarchy
+2014-12-11 22:45:32,609 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-11 22:45:32,704 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-11 22:45:32,836 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-11 22:45:32,951 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-11 22:45:32,967 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:45:33,351 WARN  [org.springframework.web.context.support.XmlWebApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceHandler' defined in URL [jar:file:/F:/7Up/SevenUp/sevenup-service/target/SevenUp.jar!/org/sevenup/service/user/UserServiceHandler.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.sevenup.repository.Repository]: : No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:752)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:816)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:744)
+	... 56 more
+2014-12-11 22:45:33,358 ERROR [org.springframework.web.context.ContextLoader:331] Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceHandler' defined in URL [jar:file:/F:/7Up/SevenUp/sevenup-service/target/SevenUp.jar!/org/sevenup/service/user/UserServiceHandler.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.sevenup.repository.Repository]: : No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:752)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:816)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:744)
+	... 56 more
+2014-12-11 22:48:51,480 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-11 22:48:51,536 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Thu Dec 11 22:48:51 CST 2014]; root of context hierarchy
+2014-12-11 22:48:51,560 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-11 22:48:51,647 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-11 22:48:51,763 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-11 22:48:51,878 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-11 22:48:51,903 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:48:52,325 WARN  [org.springframework.web.context.support.XmlWebApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceHandler' defined in URL [jar:file:/F:/7Up/SevenUp/sevenup-service/target/SevenUp.jar!/org/sevenup/service/user/UserServiceHandler.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.sevenup.repository.Repository]: : No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:752)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:816)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:744)
+	... 56 more
+2014-12-11 22:48:52,331 ERROR [org.springframework.web.context.ContextLoader:331] Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceHandler' defined in URL [jar:file:/F:/7Up/SevenUp/sevenup-service/target/SevenUp.jar!/org/sevenup/service/user/UserServiceHandler.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.sevenup.repository.Repository]: : No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:752)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:816)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:744)
+	... 56 more
+2014-12-11 22:49:47,451 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-11 22:49:47,526 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Thu Dec 11 22:49:47 CST 2014]; root of context hierarchy
+2014-12-11 22:49:47,555 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-11 22:49:47,641 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-11 22:49:47,755 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-11 22:49:47,881 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-11 22:49:47,896 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:49:48,317 WARN  [org.springframework.web.context.support.XmlWebApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceHandler' defined in URL [jar:file:/F:/7Up/SevenUp/sevenup-service/target/SevenUp.jar!/org/sevenup/service/user/UserServiceHandler.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.sevenup.repository.Repository]: : No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:752)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:816)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:744)
+	... 56 more
+2014-12-11 22:49:48,324 ERROR [org.springframework.web.context.ContextLoader:331] Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceHandler' defined in URL [jar:file:/F:/7Up/SevenUp/sevenup-service/target/SevenUp.jar!/org/sevenup/service/user/UserServiceHandler.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.sevenup.repository.Repository]: : No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:752)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1036)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:548)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:467)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:115)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.sevenup.repository.Repository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:816)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:744)
+	... 56 more
+2014-12-11 22:57:22,870 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-11 22:57:22,923 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Thu Dec 11 22:57:22 CST 2014]; root of context hierarchy
+2014-12-11 22:57:22,948 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-11 22:57:23,033 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-11 22:57:23,140 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-11 22:57:23,289 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-11 22:57:23,304 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:57:23,772 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 900 ms
+2014-12-11 22:57:23,832 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-12-11 22:57:23,836 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:57:23 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:57:23,836 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-12-11 22:57:23,867 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-12-11 22:57:23,979 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:57:24,204 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.controller.Account)
+2014-12-11 22:57:24,205 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-12-11 22:57:24,205 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/xxx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.rest.controller.Account>> org.sevenup.rest.controller.AccountController.viewAccounts()
+2014-12-11 22:57:24,207 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-12-11 22:57:24,208 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.controller.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 22:57:24,208 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.controller.Account)
+2014-12-11 22:57:24,209 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.memo.Memo> org.sevenup.rest.controller.memo.MemoController.createMemo(org.sevenup.domain.memo.Memo,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 22:57:24,210 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.sevenup.domain.memo.Memo org.sevenup.rest.controller.memo.MemoController.getMemo()
+2014-12-11 22:57:24,211 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.createUser(org.sevenup.domain.user.User,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 22:57:24,212 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.user.UserController.signIn(org.sevenup.domain.user.User)
+2014-12-11 22:57:24,212 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.signUp(org.sevenup.domain.user.User)
+2014-12-11 22:57:24,213 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.domain.user.User>> org.sevenup.rest.controller.user.UserController.getUsers()
+2014-12-11 22:57:24,213 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.viewUser(java.lang.String)
+2014-12-11 22:57:24,664 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:57:23 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:57:24,708 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:57:23 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:57:24,776 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-12-11 22:57:24,778 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-12-11 22:57:24,787 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-12-11 22:57:24,794 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-12-11 22:57:24,818 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 985 ms
+2014-12-11 22:57:25,343 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:57:23 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:59:40,724 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-11 22:59:40,792 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Thu Dec 11 22:59:40 CST 2014]; root of context hierarchy
+2014-12-11 22:59:40,823 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-11 22:59:40,911 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-11 22:59:41,024 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-11 22:59:41,148 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-11 22:59:41,163 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:59:41,585 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 859 ms
+2014-12-11 22:59:41,642 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-12-11 22:59:41,647 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:59:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:59:41,647 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-12-11 22:59:41,675 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-12-11 22:59:41,792 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 22:59:41,983 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.controller.Account)
+2014-12-11 22:59:41,984 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-12-11 22:59:41,985 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/xxx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.rest.controller.Account>> org.sevenup.rest.controller.AccountController.viewAccounts()
+2014-12-11 22:59:41,986 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-12-11 22:59:41,987 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.controller.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 22:59:41,987 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.controller.Account)
+2014-12-11 22:59:41,989 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.memo.Memo> org.sevenup.rest.controller.memo.MemoController.createMemo(org.sevenup.domain.memo.Memo,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 22:59:41,989 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.sevenup.domain.memo.Memo org.sevenup.rest.controller.memo.MemoController.getMemo()
+2014-12-11 22:59:41,991 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.createUser(org.sevenup.domain.user.User,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 22:59:41,991 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.user.UserController.signIn(org.sevenup.domain.user.User)
+2014-12-11 22:59:41,992 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.signUp(org.sevenup.domain.user.User)
+2014-12-11 22:59:41,992 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.domain.user.User>> org.sevenup.rest.controller.user.UserController.getUsers()
+2014-12-11 22:59:41,993 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.viewUser(java.lang.String)
+2014-12-11 22:59:42,363 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:59:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:59:42,405 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:59:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 22:59:42,464 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-12-11 22:59:42,467 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-12-11 22:59:42,472 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-12-11 22:59:42,477 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-12-11 22:59:42,500 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 858 ms
+2014-12-11 22:59:43,035 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 22:59:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 23:04:40,125 INFO  [org.springframework.web.context.ContextLoader:285] Root WebApplicationContext: initialization started
+2014-12-11 23:04:40,190 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing Root WebApplicationContext: startup date [Thu Dec 11 23:04:40 CST 2014]; root of context hierarchy
+2014-12-11 23:04:40,225 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2014-12-11 23:04:40,317 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+2014-12-11 23:04:40,455 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/tools-config.xml]
+2014-12-11 23:04:40,588 INFO  [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172] Loading properties file from class path resource [spring/data-access.properties]
+2014-12-11 23:04:40,602 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 23:04:41,064 INFO  [org.springframework.web.context.ContextLoader:325] Root WebApplicationContext: initialization completed in 936 ms
+2014-12-11 23:04:41,123 INFO  [org.springframework.web.servlet.DispatcherServlet:484] FrameworkServlet 'SevenUp': initialization started
+2014-12-11 23:04:41,127 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:510] Refreshing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 23:04:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 23:04:41,128 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2014-12-11 23:04:41,160 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2014-12-11 23:04:41,268 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:153] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-11 23:04:41,475 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.AccountController.createUser(org.sevenup.rest.controller.Account)
+2014-12-11 23:04:41,476 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.getAllAccounts()
+2014-12-11 23:04:41,476 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/xxx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.rest.controller.Account>> org.sevenup.rest.controller.AccountController.viewAccounts()
+2014-12-11 23:04:41,478 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.viewAccount(java.lang.String)
+2014-12-11 23:04:41,478 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.createAcount(org.sevenup.rest.controller.Account,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 23:04:41,479 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/accounts/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.rest.controller.Account> org.sevenup.rest.controller.AccountController.signUp(org.sevenup.rest.controller.Account)
+2014-12-11 23:04:41,480 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.memo.Memo> org.sevenup.rest.controller.memo.MemoController.createMemo(org.sevenup.domain.memo.Memo,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 23:04:41,480 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/memo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.sevenup.domain.memo.Memo org.sevenup.rest.controller.memo.MemoController.getMemo()
+2014-12-11 23:04:41,481 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.createUser(org.sevenup.domain.user.User,org.springframework.web.util.UriComponentsBuilder)
+2014-12-11 23:04:41,482 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signIn],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean org.sevenup.rest.controller.user.UserController.signIn(org.sevenup.domain.user.User)
+2014-12-11 23:04:41,482 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/signUp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.signUp(org.sevenup.domain.user.User)
+2014-12-11 23:04:41,483 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.sevenup.domain.user.User>> org.sevenup.rest.controller.user.UserController.getUsers()
+2014-12-11 23:04:41,483 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220] Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.sevenup.domain.user.User> org.sevenup.rest.controller.user.UserController.viewUser(java.lang.String)
+2014-12-11 23:04:41,892 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 23:04:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 23:04:41,933 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523] Looking for @ControllerAdvice: WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 23:04:41 CST 2014]; parent: Root WebApplicationContext
+2014-12-11 23:04:42,005 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-12-11 23:04:42,008 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2014-12-11 23:04:42,016 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2014-12-11 23:04:42,021 INFO  [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2014-12-11 23:04:42,048 INFO  [org.springframework.web.servlet.DispatcherServlet:503] FrameworkServlet 'SevenUp': initialization completed in 924 ms
+2014-12-11 23:04:42,578 INFO  [org.springframework.web.context.support.XmlWebApplicationContext:862] Closing WebApplicationContext for namespace 'SevenUp-servlet': startup date [Thu Dec 11 23:04:41 CST 2014]; parent: Root WebApplicationContext
