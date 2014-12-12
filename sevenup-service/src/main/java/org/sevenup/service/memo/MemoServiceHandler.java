@@ -14,13 +14,6 @@ import org.springframework.data.repository.Repository;
 import org.springframework.stereotype.Service;
 @Service
 public class MemoServiceHandler implements MemoService{
-//    private final Repository memoResoitory;
-//    private final Repository memoItemResoitory;
-//    @Autowired
-//    public MemoServiceHandler(Repository memoResoitory,Repository memoItemResoitory) {
-//        this.memoResoitory = memoResoitory;
-//        this.memoItemResoitory = memoItemResoitory;
-//    }
 	@Override
 	public Memo findMemo() {
 		Memo memo = new Memo();

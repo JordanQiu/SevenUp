@@ -1,8 +1,14 @@
 package org.sevenup.repository.memo;
 import org.sevenup.domain.memo.Memo;
+import org.sevenup.domain.user.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -10,6 +16,17 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MemoRepository implements CrudRepository<Memo,Long>{
 
+	@Autowired
+	@Qualifier("mongoTemplate")
+	MongoTemplate mongoTemplate;
+	
+	public MongoTemplate getMongoTemplate() {
+		return mongoTemplate;
+	}
+
+	public void setMongoTemplate(MongoTemplate mongoTemplate) {
+		this.mongoTemplate = mongoTemplate;
+	}
 	@Override
 	public long count() {
 		// TODO Auto-generated method stub
@@ -48,20 +65,17 @@ public class MemoRepository implements CrudRepository<Memo,Long>{
 
 	@Override
 	public Iterable<Memo> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return mongoTemplate.findAll(Memo.class);
 	}
 
 	@Override
 	public Iterable<Memo> findAll(Iterable<Long> arg0) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Memo findOne(Long arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public Memo findOne(Long id) {
+		return mongoTemplate.findOne(new Query(Criteria.where("id").is(id)), Memo.class);
 	}
 
 	@Override

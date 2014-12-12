@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sevenup.domain.user.User;
-import org.sevenup.repository.Repository;
+import org.sevenup.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceHandler implements UserService{
 
-	private Repository userRepository;
+	private UserRepository userRepository;
 	@Autowired
-	public UserServiceHandler(Repository userRepository) {
+	public UserServiceHandler(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
 
@@ -28,9 +28,15 @@ public class UserServiceHandler implements UserService{
         	user.setName("number"+i);
         	user.setCreatedTime("2014-12-23");
         	user.setLocactionId("test");
-        	userRepository.saveObject(user);
+        	userRepository.save(user);
         }
-		List<User> userList = userRepository.getAllObjects();
+		List<User> userList = new ArrayList<User>();
+		Iterable<User> iterable = userRepository.findAll();
+	    if(iterable != null) {
+	        for(User user: iterable) {
+	        	userList.add(user);
+	        }
+	      }
 		return userList;
 	}
 
