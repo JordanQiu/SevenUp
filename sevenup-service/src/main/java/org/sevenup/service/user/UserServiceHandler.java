@@ -1,8 +1,10 @@
 package org.sevenup.service.user;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
+import org.sevenup.common.util.CollectionConverter;
 import org.sevenup.domain.user.User;
 import org.sevenup.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +32,7 @@ public class UserServiceHandler implements UserService{
         	user.setLocactionId("test");
         	userRepository.save(user);
         }
-		List<User> userList = new ArrayList<User>();
-		Iterable<User> iterable = userRepository.findAll();
-	    if(iterable != null) {
-	        for(User user: iterable) {
-	        	userList.add(user);
-	        }
-	      }
+		List<User> userList =CollectionConverter.toList(userRepository.findAll());
 		return userList;
 	}
 
