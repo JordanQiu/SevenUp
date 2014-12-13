@@ -79,7 +79,7 @@ public class UserRepositoryHandler implements UserRepository{
 
 	@Override
 	public void createCollection() {
-		if(mongoTemplate.collectionExists(User.class)){
+		if(!mongoTemplate.collectionExists(User.class)){
 			mongoTemplate.createCollection(User.class);
 		}
 	}

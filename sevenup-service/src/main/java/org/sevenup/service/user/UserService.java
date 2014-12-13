@@ -11,7 +11,7 @@ public interface UserService {
 
     User findUserById(Long id) throws DataAccessException;
 
-    void saveUser(User user) throws DataAccessException;
+    User saveUser(User user) throws DataAccessException;
 
     void deleteUser(Long id) throws DataAccessException;
 

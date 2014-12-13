@@ -1,6 +1,5 @@
 package org.sevenup.rest.controller.user;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -51,11 +50,13 @@ public class UserController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<User> createUser(@RequestBody User User,UriComponentsBuilder builder) {
+	public ResponseEntity<User> createUser(@RequestBody User user,UriComponentsBuilder builder) {
 		UUID idKey = UUID.randomUUID();
+		System.out.println(idKey+"---nonumber1989---");
+		userService.saveUser(user);
 		HttpHeaders headers = new HttpHeaders();
 		headers.setLocation(builder.path("/user/{id}").buildAndExpand(idKey.toString()).toUri());
-		return new ResponseEntity<User>(User, headers, HttpStatus.CREATED);
+		return new ResponseEntity<User>(user, headers, HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "signIn")
