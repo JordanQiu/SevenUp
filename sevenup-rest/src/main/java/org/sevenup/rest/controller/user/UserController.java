@@ -36,7 +36,6 @@ public class UserController {
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
 	public ResponseEntity<List<User>> getUsers() {
-//		return userService.findUsers();
 		List<User> userList =  userService.findUsers();
 		return new ResponseEntity<List<User>>(userList, HttpStatus.OK);
 	}

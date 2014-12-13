@@ -1,6 +1,8 @@
 F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\MemoBoard.java
 F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\memo\MemoItemRepository.java
 F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\user\UserRepositoryHandler.java
+F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\memo\MemoItemRepositoryHandler.java
+F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\memo\MemoRepositoryHandler.java
 F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\user\User.java
 F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\repository\memo\MemoRepository.java
 F:\7Up\SevenUp\sevenup-repository\src\main\java\org\sevenup\domain\memo\MemoItem.java
