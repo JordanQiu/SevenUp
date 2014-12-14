@@ -1,7 +1,5 @@
 package org.sevenup.service.memo;
 
-import java.util.List;
-
 import org.sevenup.domain.memo.Memo;
 import org.sevenup.domain.memo.MemoItem;
 import org.springframework.dao.DataAccessException;

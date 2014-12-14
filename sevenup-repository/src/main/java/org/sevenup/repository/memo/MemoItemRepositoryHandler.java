@@ -1,28 +1,22 @@
 package org.sevenup.repository.memo;
 
-import java.util.List;
-
 import org.sevenup.domain.memo.MemoItem;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class MemoItemRepositoryHandler implements MemoItemRepository{
-
+	
+	@Autowired
+	@Qualifier("mongoTemplate")
+	MongoTemplate mongoTemplate;
 	@Override
-	public List<MemoItem> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<MemoItem> findAll(Sort sort) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends MemoItem> List<S> save(Iterable<S> sort) {
+	public Iterable<MemoItem> findAll(Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -40,19 +34,31 @@ public class MemoItemRepositoryHandler implements MemoItemRepository{
 	}
 
 	@Override
-	public MemoItem findOne(Long id) {
+	public <S extends MemoItem> Iterable<S> save(Iterable<S> entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean exists(Long id) {
+	public MemoItem findOne(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean exists(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Iterable<MemoItem> findAll(Iterable<Long> ids) {
+	public Iterable<MemoItem> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<MemoItem> findAll(Iterable<String> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -64,7 +70,7 @@ public class MemoItemRepositoryHandler implements MemoItemRepository{
 	}
 
 	@Override
-	public void delete(Long id) {
+	public void delete(String id) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -89,14 +95,14 @@ public class MemoItemRepositoryHandler implements MemoItemRepository{
 
 	@Override
 	public void createCollection() {
-		// TODO Auto-generated method stub
-		
+		if(!mongoTemplate.collectionExists(MemoItem.class)){
+			mongoTemplate.createCollection(MemoItem.class);
+		}
 	}
 
 	@Override
 	public void dropCollection() {
-		// TODO Auto-generated method stub
-		
-	}
-
-}
+		if(mongoTemplate.collectionExists(MemoItem.class)){
+			mongoTemplate.dropCollection(MemoItem.class);
+		}
+	}}

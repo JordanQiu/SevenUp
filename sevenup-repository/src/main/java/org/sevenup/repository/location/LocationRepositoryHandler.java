@@ -1,54 +1,48 @@
-package org.sevenup.repository.memo;
+package org.sevenup.repository.location;
 
 import java.util.List;
 
-import org.sevenup.domain.memo.Memo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.sevenup.domain.location.Location;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.stereotype.Repository;
-@Repository
-public class MemoRepositoryHandler implements MemoRepository{
+import org.springframework.data.geo.Box;
+import org.springframework.data.geo.Circle;
 
-	@Autowired
-	@Qualifier("mongoTemplate")
-	MongoTemplate mongoTemplate;
+public class LocationRepositoryHandler implements LocationRepository{
 
 	@Override
-	public List<Memo> findAll() {
+	public List<Location> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Memo> findAll(Sort sort) {
+	public List<Location> findAll(Sort arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Memo> List<S> save(Iterable<S> memos) {
+	public <S extends Location> List<S> save(Iterable<S> arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Page<Memo> findAll(Pageable pageable) {
+	public Page<Location> findAll(Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Memo> S save(S entity) {
+	public <S extends Location> S save(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Memo findOne(String id) {
+	public Location findOne(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -60,7 +54,7 @@ public class MemoRepositoryHandler implements MemoRepository{
 	}
 
 	@Override
-	public Iterable<Memo> findAll(Iterable<String> ids) {
+	public Iterable<Location> findAll(Iterable<String> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -78,13 +72,13 @@ public class MemoRepositoryHandler implements MemoRepository{
 	}
 
 	@Override
-	public void delete(Memo entity) {
+	public void delete(Location entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete(Iterable<? extends Memo> entities) {
+	public void delete(Iterable<? extends Location> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -96,17 +90,15 @@ public class MemoRepositoryHandler implements MemoRepository{
 	}
 
 	@Override
-	public void createCollection() {
-		if(!mongoTemplate.collectionExists(Memo.class)){
-			mongoTemplate.createCollection(Memo.class);
-		}
+	public List<Location> findByPositionWithin(Circle c) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public void dropCollection() {
-		if(mongoTemplate.collectionExists(Memo.class)){
-			mongoTemplate.dropCollection(Memo.class);
-		}
+	public List<Location> findByPositionWithin(Box b) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
+	
 }
